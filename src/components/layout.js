@@ -1,18 +1,30 @@
 import { Link } from 'gatsby';
 import * as React from 'react';
+import { 
+    container,
+    navLinkItem,
+    navLinkText,
+    navLinks,
+    heading,
+} from './layout.module.css';
 
-
+// Destructurizing extracts properties of the of obj arg passed in and assigns to variables.
 const Layout = ({pageTitle, children}) => (
-    <div>
+    <div className={container}>
         <title>{pageTitle}</title>
         <nav>
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/faucets">Faucets</Link></li>
+            <h5>Navigation</h5>
+            <ul className={navLinks}>
+                <li className={navLinkItem}>
+                    <Link className={navLinkText} to="/">Home</Link>
+                </li>
+                <li className={navLinkItem}>
+                    <Link className={navLinkText} to="/faucets">Faucets</Link>
+                </li>
             </ul>
         </nav>
         <main>
-            <h2>{pageTitle}</h2>
+            <h2 className={heading}>{pageTitle}</h2>
             {children}
         </main>
     </div>
