@@ -21,5 +21,13 @@ module.exports = {
         defaultDataLayer: { platform: "gatsby" },
       },
     },
+
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `tutorial-examples`,
+        path: `${__dirname}/tutorial-examples`,
+      }
+    },
   ]
 };
