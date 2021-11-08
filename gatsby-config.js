@@ -22,6 +22,7 @@ module.exports = {
       },
     },
 
+    // Data source: filesystem
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -29,5 +30,8 @@ module.exports = {
         path: `${__dirname}/tutorial-examples`,
       }
     },
+
+    // To transform the .mdx files from the datasource into a usable format. 
+    `gatsby-plugin-mdx`,
   ]
 };
