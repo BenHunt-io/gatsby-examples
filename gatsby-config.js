@@ -6,6 +6,7 @@ module.exports = {
   // In your gatsby-config.js
   plugins: [
 
+    // Analytics
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
@@ -22,8 +23,9 @@ module.exports = {
       },
     },
 
-    // Data source: filesystem
+    // Data source: filesystem: mdx
     {
+      // mdx blog dir
       resolve: "gatsby-source-filesystem",
       options: {
         name: `tutorial-examples`,
@@ -33,5 +35,10 @@ module.exports = {
 
     // To transform the .mdx files from the datasource into a usable format. 
     `gatsby-plugin-mdx`,
+
+    // Image support
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, // Needed for dynamic images
   ]
 };
